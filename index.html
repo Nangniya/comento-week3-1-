@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시계</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./index.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="whole-wrapper">
+      <header class="battery-container">
+        <div class="battery_box">
+          배터리: <span id="current_battery"></span>%
+        </div>
+        <div id="power-btn">전원</div>
+      </header>
+      <main class="clock-container">
+        <section class="current-time-wrapper">
+          <p>시간</p>
+          <div id="current_time"></div>
+        </section>
+        <section class="current-alram-wrapper">
+          <p>알람 현황</p>
+          <div>
+            <ul id="current_alram"></ul>
+          </div>
+        </section>
+      </main>
+      <footer class="alram-container">
+        <p>알람</p>
+        <div class="alram-box">
+          <input id="hour" type="number" placeholder="시" />
+        </div>
+        <div class="minute-and-second">
+          <div class="alram-box">
+            <input id="minute" type="number" placeholder="분" />
+          </div>
+          <div class="alram-box">
+            <input id="second" type="number" placeholder="초" />
+          </div>
+        </div>
+        <button class="alram-box" id="add_alram">추가</button>
+      </footer>
+    </div>
+  </body>
+</html>
