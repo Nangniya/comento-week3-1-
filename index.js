@@ -1,5 +1,6 @@
 const currentBatteryBox = document.querySelector("#current_battery");
 const currentTimeBox = document.querySelector("#current_time");
+const currentAlramBox = document.querySelector(".current_alram");
 const powerBtn = document.querySelector("#power-btn");
 const hourInput = document.querySelector("#hour");
 const minuteInput = document.querySelector("#minute");
@@ -7,7 +8,7 @@ const secondInput = document.querySelector("#second");
 const addButton = document.querySelector("#add_alram");
 const alramList = document.querySelector("#current_alram");
 
-let battery = 100;
+let battery = 5;
 
 function updateCurrentBattery() {
   if (battery > 0) {
@@ -16,6 +17,7 @@ function updateCurrentBattery() {
   } else {
     currentTimeBox.innerText = "";
     currentTimeBox.style.backgroundColor = "black";
+    currentAlramBox.style.backgroundColor = "black";
     powerBtn.style.backgroundColor = "tomato";
   }
 }
@@ -24,6 +26,7 @@ function powerOn() {
   if (battery === 0) {
     battery = 100;
     currentTimeBox.style.backgroundColor = "transparent";
+    currentAlramBox.style.backgroundColor = "transparent";
     powerBtn.style.backgroundColor = "yellowgreen";
   }
 }
