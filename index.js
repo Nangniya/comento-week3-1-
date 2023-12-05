@@ -34,9 +34,9 @@ function powerOn() {
 function updateCurrentTime() {
   const currentDate = new Date();
   const formattedDate = `${currentDate.getFullYear()}-${
-    currentDate.getMonth() <= 9
-      ? "0" + currentDate.getMonth()
-      : currentDate.getMonth()
+    currentDate.getMonth() + 1 <= 9
+      ? "0" + (currentDate.getMonth() + 1)
+      : currentDate.getMonth() + 1
   }-${
     currentDate.getDate() <= 9
       ? "0" + currentDate.getDate()
